@@ -16,4 +16,16 @@ player_count = 2
 
 word_bank = ["River", "Ocean", "Beach", "Stone", "Earth"]
 secret_word = random.choice(word_bank)
-
+list(secret_word)
+for x in list(secret_word):
+    print(x.lower())
+    for y in range (2):
+        print (y)
+        letter = input("Please enter a letter: ")
+        print(letter)
+        if letter == x: 
+            print("Your guess was correct")
+        word = input("Guess the word: ")
+        print(word)
+        if word == secret_word:
+            print("Congradulations! You guessed the word!")
