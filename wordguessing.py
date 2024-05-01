@@ -35,8 +35,13 @@ while True:
                 break
             else:
                 print("Sorry, that is not the correct answer.")
-            word_guess_counts[y] = word_guess_counts[y] + 1     
-        print("Amount of times you've guessed the word: ", word_guess_counts)
-        print("score: ", scores)
+            word_guess_counts[y] = word_guess_counts[y] + 1 
+            if word_guess_counts[y] == 3:
+                print("You have guessed the word 3 times, you lose :(")
+                game_is_completed = True
+                break 
+            
     if game_is_completed: 
-        break
+        break    
+print("Amount of times the word has been guessed for all players: ", word_guess_counts)
+print("score for all players: ", scores)
