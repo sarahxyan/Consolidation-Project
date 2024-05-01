@@ -12,6 +12,12 @@
 
 import random 
 
+def pick_letter():
+    letter = input("Please enter a letter : ")
+    if letter == "":
+        return pick_letter()
+    return letter
+
 player_count = 2
 
 word_bank = ["River", "Ocean", "Beach", "Stone", "Earth"]
@@ -19,11 +25,12 @@ scores = [0,0]
 word_guess_counts = [0,0]
 secret_word = random.choice(word_bank).lower()
 print(secret_word)
+print("Theme of the word is nature, and the word is five letters long")
 game_is_completed = False
 while True:  
     for y in range (2):
         print ("Person Number: ", y)
-        letter = input("Please enter a letter : ")
+        letter = pick_letter()
         print("The letter appears this many times in the word: ", secret_word.count(letter))
         scores[y] = scores[y] + 1
         word = input("Guess the word (press enter if you would like to skip): ")
@@ -43,5 +50,5 @@ while True:
             
     if game_is_completed: 
         break    
-print("Amount of times the word has been guessed for all players: ", word_guess_counts)
-print("score for all players: ", scores)
+print("Amount of times the word has been guessed: ", word_guess_counts)
+print("score: ", scores)
