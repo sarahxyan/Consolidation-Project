@@ -19,6 +19,7 @@ scores = [0,0]
 word_guess_counts = [0,0]
 secret_word = random.choice(word_bank).lower()
 print(secret_word)
+game_is_completed = False
 while True:  
     for y in range (2):
         print ("Person Number: ", y)
@@ -30,12 +31,12 @@ while True:
         if word != "": 
             if word == secret_word:
                 print("Congradulations! You guessed the word!")
+                game_is_completed = True
+                break
             else:
                 print("Sorry, that is not the correct answer.")
             word_guess_counts[y] = word_guess_counts[y] + 1     
         print("Amount of times you've guessed the word: ", word_guess_counts)
         print("score: ", scores)
-
-    
-
-        
+    if game_is_completed: 
+        break
