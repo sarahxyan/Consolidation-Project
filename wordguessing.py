@@ -24,7 +24,6 @@ word_bank = ["River", "Ocean", "Beach", "Stone", "Earth"]
 scores = [0,0]
 word_guess_counts = [0,0]
 secret_word = random.choice(word_bank).lower()
-print(secret_word)
 print("Theme of the word is nature, and the word is five letters long")
 game_is_completed = False
 while True:  
