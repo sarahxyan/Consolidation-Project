@@ -15,17 +15,27 @@ import random
 player_count = 2
 
 word_bank = ["River", "Ocean", "Beach", "Stone", "Earth"]
-secret_word = random.choice(word_bank)
-list(secret_word)
-for x in list(secret_word):
-    print(x.lower())
+scores = [0,0]
+word_guess_counts = [0,0]
+secret_word = random.choice(word_bank).lower()
+print(secret_word)
+while True:  
     for y in range (2):
-        print (y)
-        letter = input("Please enter a letter: ")
-        print(letter)
-        if letter == x: 
-            print("Your guess was correct")
-        word = input("Guess the word: ")
+        print ("Person Number: ", y)
+        letter = input("Please enter a letter : ")
+        print("The letter appears this many times in the word: ", secret_word.count(letter))
+        scores[y] = scores[y] + 1
+        word = input("Guess the word (press enter if you would like to skip): ")
         print(word)
-        if word == secret_word:
-            print("Congradulations! You guessed the word!")
+        if word != "": 
+            if word == secret_word:
+                print("Congradulations! You guessed the word!")
+            else:
+                print("Sorry, that is not the correct answer.")
+            word_guess_counts[y] = word_guess_counts[y] + 1     
+        print("Amount of times you've guessed the word: ", word_guess_counts)
+        print("score: ", scores)
+
+    
+
+        
