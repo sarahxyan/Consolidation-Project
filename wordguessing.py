@@ -12,6 +12,9 @@
 
 import random 
 
+import matplotlib.pyplot as plt
+
+
 def pick_letter():
     letter = input("Please enter a letter : ")
     if len(letter) != 1:
@@ -57,4 +60,8 @@ while True:
         break    
 for y in range(player_count):
     print("Player #%d Score: %d Guess Count: %d" % (y+1, scores[y], word_guess_counts[y]))
-          
+    plt.bar(range(1, player_count +1), scores) 
+    plt.xlabel('Players')
+    plt.ylabel('Scores')      
+    plt.title(['Scores of Each Player'])
+    plt.show()
