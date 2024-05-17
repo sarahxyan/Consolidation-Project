@@ -1,6 +1,6 @@
-Word Guessing Game
+Word Guessing Game!
 run "python wordguessing.py" on the command line.
-word bank theme is nature and the words are each 5 letters long 
+word bank theme is nature and the words are each 5 letters long.
 players take turns to enter a letter.
 the game will display how many times the letter appears in the word they are guessing.
 players can also enter a word if they want.
