@@ -14,7 +14,7 @@ import random
 
 def pick_letter():
     letter = input("Please enter a letter : ")
-    if letter == "":
+    if len(letter) != 1:
         return pick_letter()
     return letter
 
