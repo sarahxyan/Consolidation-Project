@@ -31,7 +31,6 @@ for playerIndex in range(player_count):
     word_guess_counts.append(0)
 
 secret_word = random.choice(word_bank).lower()
-print(secret_word)
 print("Theme of the word is nature, and the word is five letters long")
 game_is_completed = False
 while True:  
