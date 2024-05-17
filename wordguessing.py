@@ -41,6 +41,7 @@ while True:
         print(word)
         if word != "": 
             if word == secret_word:
+                word_guess_counts[y] = word_guess_counts[y] + 1 
                 print("Congradulations! You guessed the word!")
                 game_is_completed = True
                 break
